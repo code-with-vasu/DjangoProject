@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        .header { text-align: center; font-size: 20px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Invoice</div>
+        <p><strong>Appointment:</strong> {{ billing.appointment }}</p>
+        <p><strong>Doctor:</strong> {{ billing.appointment.doctor }}</p>
+        <p><strong>Patient:</strong> {{ billing.appointment.patient }}</p>
+        <p><strong>Amount:</strong> ${{ billing.amount }}</p>
+        <p><strong>Status:</strong> {{ billing.status }}</p>
+        <hr>
+        <p>Thank you for your visit!</p>
+    </div>
+</body>
+</html>
