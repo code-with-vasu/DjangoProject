@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from .models import *
 
 
+
 def register_doctor(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -129,3 +130,33 @@ def payment_success(request):
 
 def payment_cancel(request):
     return render(request, 'payment_cancel.html')
+
+
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.conf import settings
+
+
+def send_test_email(request):
+    subject = "Hello from Django"
+    message = "This is a test email sent from Django."
+    recipient_list = ["agvasup123@gmail.com"]  # Replace with the recipient's email
+
+    send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list, fail_silently=False)
+
+    return HttpResponse("Email sent successfully!")
+
+from django.core.mail import EmailMessage
+
+def send_email_with_attachment(request):
+    email = EmailMessage(
+        subject="Email with Attachment",
+        body="Please find the attachment.",
+        from_email=settings.EMAIL_HOST_USER,
+        to=["agvasup123@gmail.com"],
+    )
+    email.attach_file("template/A1/test.txt")  # Replace with actual file path
+    email.send()
+
+    return HttpResponse("Email with attachment sent successfully!")
+

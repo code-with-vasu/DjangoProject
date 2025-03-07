@@ -180,9 +180,7 @@
 # print("after deleting node")
 # delete_edge('A','C')
 # print(graph)
-
-
-
+# from P1.DSA.ex import stack
 
 
 # def even(n):
@@ -246,31 +244,83 @@
 # alphabet2=(input("enter ur alphabet2"))
 # Alp(alphabet,alphabet2)
 
+#
+
+# def Genarate_Prime(n):
+#     for i in range(5,0,-1):
+#         for j in range(5,0,-1):
+#             print(i,end=" ")
+#         print()
+# Genarate_Prime(5)
 
 
+# stack implementation by using list
+#
+# def Stack1():
+#     stack1=[1,2,3,4]
+#     size=int(input("enter ur size of the stack"))
+#     n=int(input("enter ur option"))
+#     i=1
+#     while i<=size:
+#         if n == 1:
+#             ele = int(input("enter ur element"))
+#             stack1.append(ele)
+#         elif n == 2:
+#             print(stack1[-1])
+#             pop_ele = stack1.pop()
+#             print(pop_ele)
+#         else:
+#             pass
+#         i+=1
+#         print(stack1)
+# Stack1()
 
+#
+# n=5
+# for i in range(n):
+#     print(" "*(n-i-1)+'*'*(2*i+1))
+#
+# for j in range(1,6):
+#     print("*",end=" ")
+# print()
+# for k in range(1,5):
+#     for i in range(1,6):
+#         if i == 1 or i == 5:
+#             print("*", end=" ")
+#         else:
+#             print(" ", end=" ")
+# #     print()
+# for r in range(1,6):
+#     print("*",end=" ")
 
+# n=6
+# for i in range(1,n+1):
+#     print("*"*i+ " "*(2*(n-i)) +"*"*i)
+# for j in range(n,0,-1):
+#     print("*" * j + " " * (2 * (n - j)) + "*" * j)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
+n=6
+for i in range(n):
+    for j in range(n):
+        print(" ",end="")
+    n=n-1
+    for k in range(2*i+1): # 0,1
+        if k==0 or k==2*i:
+            print("*",end=" ")
+        else:
+            print(" ",end="")
+    print()
+for i in range(n):
+    for j in range(n,0,-1):
+        print(" ",end="")
+    n=n-1
+    for k in range(2*i+1): # 0,1
+        if k==0 or k==2*i:
+            print("*",end=" ")
+        else:
+            print(" ",end="")
+    print()
 
 
 

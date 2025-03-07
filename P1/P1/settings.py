@@ -128,3 +128,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STRIPE_PUBLIC_KEY = "pk_test_51QuTI8BARTfsQsVqwegxipZTlLvlsd5AJ10zJNM2I9ZusSwVnqBBdJY4zHc5eNWJdk8z6BUgWE2LAZscqLjCmrkH00K5524pI9"
 STRIPE_SECRET_KEY = "sk_test_51QuTI8BARTfsQsVqqoGhPWL8nWU9KTfg1Wlgks22Yx8FbWON1qCKERM1qecyhq71u1EdX1Aj9g8UOqL3PwJ7sBmE00nMKOUAUc"
+
+# here configure email services
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"  # Use your email provider's SMTP server
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "agvasu2015@gmail.com"  # Replace with your email
+EMAIL_HOST_PASSWORD = "dpjn dmgc dyhi iuku"  # Use an app password for security
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
