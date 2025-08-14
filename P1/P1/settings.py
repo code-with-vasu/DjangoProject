@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-+nuf@ar0se65^ibe%jfs)2apoie^)j_7(xn77rnvl7-0b^4%f+
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'agvasu1.pythonanywhere.com',
+    # 'agvasu1.pythonanywhere.com',
     'www.agvasu1.pythonanywhere.com'
 ]
 
